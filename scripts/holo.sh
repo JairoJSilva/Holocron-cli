@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flowctl() {
+holo() {
     if [ "$1" = "use" ] || [ "$1" = "clear" ]; then
         # Executa o binário Go e captura a saída e o código de retorno
         OUTPUT=$(./switch-cli-cloud "$@")

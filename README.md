@@ -1,4 +1,6 @@
-# switch-cli-cloud (flowctl)
+# holocron-cli
+
+O **Holocron CLI** é um gerenciador unificado de acesso à nuvem. Ele resolve o problema de ter que configurar manualmente credenciais e variáveis de ambiente toda vez que você precisa trabalhar em um cliente ou projeto diferente. Com ele, você pode alternar rapidamente entre contas da AWS, GCP, OCI e Azure com um comando curto e fácil de lembrar.
 
 Uma ferramenta de linha de comando feita em Go para alternar rapidamente entre contextos e perfis de clientes em provedores de nuvem (AWS, GCP, OCI, Azure).
 
@@ -7,8 +9,8 @@ Uma ferramenta de linha de comando feita em Go para alternar rapidamente entre c
 * `configs/`: Contém os arquivos `.yaml` com as definições de perfil e contas por cliente.
 * `cmd/switch-cli-cloud/main.go`: Ponto de entrada da CLI.
 * `internal/`: Lógica de gerenciamento de estado e geração dos comandos para os provedores.
-* `scripts/flowctl.sh`: Wrapper em Bash (Linux/macOS/WSL) que avalia as variáveis de ambiente.
-* `scripts/flowctl.ps1`: Wrapper em PowerShell (Windows) que avalia as variáveis de ambiente.
+* `scripts/holo.sh`: Wrapper em Bash (Linux/macOS/WSL) que avalia as variáveis de ambiente.
+* `scripts/holo.ps1`: Wrapper em PowerShell (Windows) que avalia as variáveis de ambiente.
 
 ## Como instalar e usar
 
@@ -21,28 +23,28 @@ go build -o switch-cli-cloud ./cmd/switch-cli-cloud
 ```
 
 ### 2. Configurar o Perfil do Shell
-Adicione o conteúdo do script `scripts/flowctl.sh` no seu arquivo de Profile (ex: `~/.bashrc` ou `~/.zshrc`) para que o comando `flowctl` esteja sempre disponível, ou chame o script (lembrando de ajustar o caminho do executável `switch-cli-cloud` no script de acordo).
+Adicione o conteúdo do script `scripts/holo.sh` no seu arquivo de Profile (ex: `~/.bashrc` ou `~/.zshrc`) para que o comando `holo` esteja sempre disponível, ou chame o script (lembrando de ajustar o caminho do executável `switch-cli-cloud` no script de acordo).
 
 ### 3. Comandos Disponíveis
 
 * **Listar contextos:**
   ```bash
-  flowctl list
+  holo list
   ```
 
 * **Usar um contexto:**
   ```bash
-  flowctl use mv-aws
+  holo use mv-aws
   ```
 
 * **Ver o contexto atual:**
   ```bash
-  flowctl current
+  holo current
   ```
 
 * **Limpar o contexto:**
   ```bash
-  flowctl clear
+  holo clear
   ```
 
 ## Adicionar/Editar Configurações

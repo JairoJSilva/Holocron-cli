@@ -1,4 +1,4 @@
-function flowctl {
+function holo {
     if ($args[0] -eq "use" -or $args[0] -eq "clear") {
         # Executa o comando Go e captura o output
         $output = switch-cli-cloud.exe $args

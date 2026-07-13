@@ -2,7 +2,7 @@ Perfeito. Como o objetivo inicial é somente trocar de contexto rapidamente entr
 
 Você teria um comando único:
 
-flowctl use mv-aws ou flowctl use dentalis-oci
+holo use mv-aws ou holo use dentalis-oci
 
 O comando carrega automaticamente as credenciais do perfil escolhido e limpa o contexto anterior.
 
@@ -24,11 +24,11 @@ GOOGLE_APPLICATION_CREDENTIALS configurado
 
 ### Estrutura do projeto
 
-### flowctl/
+### holo/
 
 Go
 
-cmd/flowctl
+cmd/holo
 
 Ponto de entrada do binário
 
@@ -130,7 +130,7 @@ Listar todos os contextos
 
 Mostra cliente + cloud
 
-flowctl list
+holo list
 
 mv-aws
 
@@ -166,7 +166,7 @@ Ativar um contexto
 
 Troca imediata
 
-flowctl use mv-aws
+holo use mv-aws
 
 Contexto ativado
 
@@ -190,7 +190,7 @@ Ver contexto atual
 
 Consulta rápida
 
-flowctl current
+holo current
 
 Cliente
 
@@ -212,13 +212,13 @@ Limpar contexto
 
 Remove variáveis carregadas
 
-flowctl clear
+holo clear
 
 Contexto removido
 
 ### Estrutura interna em Go
 
-### cmd/flowctl/main.go
+### cmd/holo/main.go
 
 ### internal/config/config.go
 
@@ -244,11 +244,11 @@ Config Dir
 
 ### Arquivo de contexto atual
 
-### ~/.flowctl/current
+### ~/.holo/current
 
 estado atual
 
-Isso permite que o comando flowctl current funcione instantaneamente.
+Isso permite que o comando holo current funcione instantaneamente.
 
 ### Instalação
 

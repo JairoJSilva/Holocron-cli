@@ -12,7 +12,7 @@ func GetStateFilePath() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	dir := filepath.Join(home, ".flowctl")
+	dir := filepath.Join(home, ".holo")
 	if err := os.MkdirAll(dir, 0755); err != nil {
 		return "", err
 	}
