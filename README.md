@@ -1,1 +1,1 @@
-# swtich-cloud-cli
+# Holocron-cli
